@@ -1,26 +1,41 @@
 <html>
   <head>
     <link href="styles.css" rel="stylesheet" text="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="main-picture"></div>
     <div class="main-text">
-      <div class="content-wrapper">
-        <h1 class="title">Empire Ipsum</h1>
+      <div class="content">
+        <div class="wrapper">
+          <div class="box">
+            <h1 class="title">Empire Ipsum</h1>
 
-        <p class="description">A lorem ipsum generator</p>
+            <h3 class="description">A lorem ipsum generator</h3>
 
-        <form action="/" method="POST">
-          <input
-            type="number"
-            class="paragraph-number"
-            name="numberOfParagraphs"
-          />
-          <input type="submit" value="Generate" class="generate-button" />
-        </form>
+            <form action="/" method="POST">
+              <select class="paragraph-number" name="numberOfParagraphs">
+                <option value="0" selected>Choose paragraphs</option>
+                <option value="1">1 paragraph</option>
+                <option value="2">2 paragraphs</option>
+                <option value="3">3 paragraphs</option>
+                <option value="4">4 paragraphs</option>
+                <option value="5">5 paragraphs</option>
+                <option value="6">6 paragraphs</option>
+                <option value="7">7 paragraphs</option>
+              </select>
 
-        <div class="generated-text">
-          <div class="placeholder-div"></div>
+              <input type="submit" value="Generate" class="generate-button" />
+            </form>
+
+            <div class="generated-text">
+              <div class="placeholder-div"></div>
+            </div>
+            <p class="footer">created by Vicki Edwards</p>
+          </div>
         </div>
       </div>
     </div>

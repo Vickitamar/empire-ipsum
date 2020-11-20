@@ -1,31 +1,100 @@
+html,
 body {
-  display: grid;
-  grid-template-columns: 600px 1fr;
-  grid-template-rows: auto;
+  height: 100%;
+}
+body {
+  display: flex;
   margin: 0;
   min-height: 100%;
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+  background-color: #f0ffff;
 }
 
 .main-picture {
-  grid-column: 1/2;
-  width: 100%;
   box-sizing: border-box;
   background: url("images/smaller.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  min-height: 100px;
+  min-width: 35%;
 }
 
 .main-text {
-  grid-column: 2/3;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-grow: 2;
 }
 
-.content-wrapper {
+.content {
   display: flex;
+  flex: 1;
+  overflow: scroll;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
   justify-content: center;
   width: 50%;
-  flex-direction: column;
+  min-height: -webkit-min-content;
+  flex-direction: row;
   text-align: center;
+  margin-top: 100px;
+}
+
+.title {
+  padding-bottom: 20px;
+  border-bottom: 4px solid orange;
+}
+.box {
+  min-width: 80%;
+  max-width: 80%;
+}
+
+.generated-text {
+  text-align: left;
+  margin: 0 auto;
+  width: 70%;
+}
+
+p {
+  animation: fadeIn 0.8s;
+}
+
+.paragraph-number {
+  border: 1px solid #c7c7c7;
+  width: 210px;
+  height: 40px;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+input {
+  margin-left: 20px;
+  border: 1px solid #c7c7c7;
+  width: 100px;
+  height: 40px;
+  letter-spacing: 1px;
+  border-radius: 7%;
+}
+
+.footer {
+  font-size: 14px;
+  margin: 30px 0;
+  color: #a8a8a8;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.97);
+  }
+  100% {
+    opacity: 100%;
+    transform: scale(1);
+  }
 }
